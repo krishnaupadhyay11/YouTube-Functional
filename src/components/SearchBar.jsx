@@ -15,7 +15,7 @@ export default function SearchBar(){
                 value=""
                 onChange={() => {}} />
             <IconButton type="submit" style={{padding:'10px', color: 'red'}}>
-                <Search style={{color: 'black'}}/>
+                <Search />
             </IconButton>
             
         </Paper>

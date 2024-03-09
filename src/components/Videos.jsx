@@ -1,0 +1,14 @@
+import {Stack, Box} from "@mui/material"
+
+export default function Videos( {videos} ) {
+  return (
+    <Stack direction="row" flexWrap="wrap" justifyContent="start" gap={2}>
+      {videos.map((item, index) => {
+        <Box key={index}>
+          {item.id.videoId && <VideoCard item={item} />}
+          {item.id.channelId && <ChannelCard channelDetail={item} />}
+        </Box>
+      })}
+    </Stack>
+  )
+}
