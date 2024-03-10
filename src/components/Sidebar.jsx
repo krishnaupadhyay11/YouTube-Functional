@@ -2,7 +2,6 @@ import { Stack } from "@mui/material"
 import { categories} from '../utils/Constants'
 
 export default function Sidebar({selectedCategory, setSelectedCategory}) {
-  console.log(selectedCategory)
   return (
     <Stack
         direction="row"

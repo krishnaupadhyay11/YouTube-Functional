@@ -1,4 +1,4 @@
-html, body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -55,8 +55,7 @@ a {
   background: transparent;
   outline: none;
   border: none;
-
-  padding: 7px 15px;
+  padding: 8px 40px;
   margin: 10px 0px;
   border-radius: 20px;
   transition: all 0.3s ease;
