@@ -8,10 +8,10 @@ export default function VideoCard({ video: {id: {videoId}, snippet} }) {
     <Card sx={{maxWidth: {md: '321px', xs: '100%'}, borderRadius: '12px', boxShadow:'none', border:'none'}}>
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
         <CardMedia image={snippet?.thumbnails?.high?.url} alt={snippet?.title} sx={{width: 358, height: 180}} />
-        <CardContent sx={{backgroundColor: '#1e1e1e', height: '106px'}}>
+        <CardContent sx={{backgroundColor: '#1e1e1e', height: '100%'}}>
           <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
             <Typography variant="subtitle1" fontWeight="bold" color="#fff">
-              {snippet?.title.slice(0,60) || demoVideoTitle.slice(0,60)}
+              {snippet?.title.length <= 60 ? snippet?.title.slice(0,59) : `${snippet?.title.slice(0,59)}...` || demoVideoTitle.slice(0,60)}
             </Typography>
           </Link>
           <Link to={snippet?.channelId ? `/channel/${snippet?.channelId}` : demoChannelUrl}>
