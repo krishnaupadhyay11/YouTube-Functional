@@ -24,9 +24,6 @@ export default function Feed(){
                     </span>
                 </Typography>
                 <Videos videos={videos}/>
-                <Typography className="copyright" variant="body2" sx={{mt: 1.5, color: "#fff"}}>
-                    Created by Krishna Upadhyay
-                </Typography>
             </Box>
         </Stack>
     )
