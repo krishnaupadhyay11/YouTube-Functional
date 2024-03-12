@@ -10,7 +10,6 @@ export default function SearchBar(){
     function handleSubmit(e){
         e.preventDefault()
         navigate(`/search/${searchTerm}`)
-        setSearchTerm('')
     }
 
     return (
