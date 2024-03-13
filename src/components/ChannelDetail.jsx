@@ -16,14 +16,13 @@ export default function ChannelDetail(){
         fetchFromAPI(`search?channelId=${id}&part=snippet&order=date`)
         .then((data)=> setVideos(data?.items));
     }, [id])
-
-    console.log(channelDetail)
+    
     return (
         <>
             <Box minHeight="95vh">
                 <Box>
                     <div style={{background: 'linear-gradient(90deg, rgba(14,0,255,1) 0%, rgba(33,119,167,1) 35%, rgba(0,212,255,1) 100%)', zIndex: 10, height: '225px'}}/>
-                    <ChannelCard channelDetail={channelDetail} marginTop="-93px"/>
+                    <ChannelCard channelDetail={channelDetail} marginTop="-93px" cid={id} />
                 </Box>
                 <Box display="flex" p={2}>
                     <Videos videos={videos}/>

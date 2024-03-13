@@ -3,10 +3,10 @@ import { CheckCircle } from "@mui/icons-material"
 import { demoProfilePicture } from "../utils/Constants"
 import { Link } from "react-router-dom"
 
-export default function ChannelCard({channelDetail, marginTop}) {
+export default function ChannelCard({channelDetail, marginTop, cid}) {
   return (
     <Box sx={{boxShadow: 'none', borderRadius: '20px', minWidth: {md: '321px'}, maxWidth: {md: '321px', xs: '100%'}, margin: '0 auto', marginTop: marginTop}}>
-      <Link to={`/channel/${channelDetail?.id?.channelId}`}>
+      <Link to={`/channel/${channelDetail?.id?.channelId || cid}`}>
         <CardContent sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', color: '#fff', alignItems:'center'}}>
           <CardMedia image={channelDetail?.snippet?.thumbnails?.high?.url || demoProfilePicture} 
           alt={channelDetail?.snippet?.title}
